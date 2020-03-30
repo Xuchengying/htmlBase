@@ -1,0 +1,223 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:black; 
+}
+.warpper{
+    width: 640px;
+    height: 1170px;
+    background-color: lightgray;
+    margin: 500px auto 0px;
+}
+.heading{
+    cursor: pointer;
+    width: 640px;
+    height: 420px;
+    background-image: url(assets/bg1.png);
+    position: relative;
+    border-bottom-left-radius:60px;
+    border-bottom-right-radius:60px;
+}
+.heading_title{
+    width: 395px;
+    height: 65px;
+    position:relative;
+    left: 80px;
+    top: 134px;
+    background: #F0F3FB;
+    border-radius: 35px;
+    border-radius: 35px;
+}
+.heading_title img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.heading_title p{
+    float: right;
+    margin-top: 20px;
+    margin-right: 32px;
+}
+.img{
+    float: right;
+    margin-top:75px;
+    margin-right: 84px;
+}
+p{
+    font-family: PingFangSC-Medium;
+    font-size: 24px;
+    color: #B0B5D9;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+#p1{
+    font-family: PingFangSC-Medium;
+    font-size: 36px;
+    color: #585E92;
+    letter-spacing: 0;   
+}
+#p2{
+    font-family: PingFangSC-Medium;
+    font-size: 34px;
+    color: #5695FF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+}
+.border{
+    width: 65px;
+    height: 0px;
+    border: 6px solid #DCE3F4;
+    float: left;
+    margin-top: 8px;
+}
+.p1{
+    float: left;
+    margin-left: 150px;
+    margin-top: 140px;
+}
+.p{
+    float: left;
+    margin-left: 50px;
+    margin-top: 140px;
+}
+.chuli{
+    width: 200px;
+    height: 65px;
+    background-image: linear-gradient(90deg, #97B0FD 0%, #F2C8D4 100%);
+    border-radius: 35px;
+    border-radius: 34px;
+    position:relative;
+    left: 220px;   
+    top:320px;
+}
+.chuli p{
+    font-family: PingFangSC-Medium;
+    font-size: 28px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align:center;
+    padding-top: 15px;
+}
+.img_container{
+    column-count: 4;
+    margin-top: 100px;
+    margin-bottom: 24px;
+    margin-left: 30px;
+}
+.img_container img{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 36px;
+}
+.img_container p{
+    cursor: pointer;
+    font-family: PingFangSC-Regular;
+    font-size: 22px;
+    color: rgba(0,0,0,0.65);
+    letter-spacing: 0;
+    text-align: center;
+}
+.body img{
+    margin-left: 32px;
+}
+.weidu{
+    cursor: pointer;
+    width: 576px;
+    height:88px;
+    margin-left: 32px;
+    margin-top: 24px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    border-radius: 24px;
+}
+.weidu div{
+    float: left;
+    padding-top: 26px;
+}
+.weidu_img{
+    margin-top: 5px;
+    margin-left: 230px;
+}
+.weidu p{
+    font-family: PingFangSC-Medium;
+    font-size: 22px;
+    color: #B3B7D4;
+    letter-spacing: 0;
+    padding-left: 25px;
+}
+.fuwu{
+    width: 576px;
+    height: 68px;
+    margin-left: 32px;
+    margin-top: 24px;
+    background: #F0F3FB;
+    border-radius: 24px;
+    border-radius: 24px;
+}
+.fuwu div{
+    cursor: pointer;
+    float: left;
+    padding-top: 20px;
+}
+.fuwu_img{
+    position: relative;
+    left: 270px;
+    bottom: 30px;
+}
+.fuwu p{
+    font-family: PingFangSC-Medium;
+    font-size: 22px;
+    color: #A0A5C8;
+    letter-spacing: 0;
+    padding-left: 25px;
+}
+.footing{
+    cursor: pointer;
+    width: 640px;
+    height: 100px;
+    background: #FFFFFF;
+    margin: 0px auto 500px;
+}
+.footing div{
+    float: left;
+    padding-top: 20px;
+}
+.footing p{
+    font-family: PingFangSC-Medium;
+    font-size: 20px;
+    color: #B3B7D4;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 5px;
+    margin-top: 12px;
+}
+#p3{
+    font-family: PingFangSC-Medium;
+    font-size: 20px;
+    color: #D0201D;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 30px;
+}
+.renwu_img{
+    padding-left: 128px;
+}
+.gongzuotai{
+    width: 96px;
+    height: 96px;
+    background: #FFFFFF;
+    border-radius: 20px 0 20px 0 20px 0 20px 0;
+    border-radius: 20px 0px 20px 0px 20px 0px 20px 0px;
+    position: relative;
+    left:35px;
+    bottom: 35px;
+}
+.gongzuotai img{
+    margin-left: 24px;
+}
+.me_img{
+    padding-left: 80px;
+}
