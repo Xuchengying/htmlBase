@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrap{
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+.list{
+    width: 800px;
+    height: 400px;
+    list-style: none;
+    position: relative;
+}
+li{
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .8s;
+}
+.img:nth-child(1){
+    background-color: salmon;
+}
+.img:nth-child(2){
+    background-color: pink;
+}
+.img:nth-child(3){
+    background-color: cadetblue;
+}
+.img:nth-child(4){
+    background-color: crimson;
+}
+.img:nth-child(5){
+    background-color: goldenrod;
+}
+.btn{
+    cursor: pointer;
+    width: 60px;
+    height: 80px;
+    background-color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    border-radius: 100%;
+    border-color: black;
+    opacity: 0.4;
+    z-index: 1000;
+}
+#golast{
+    left: 0px;
+}
+#gonext{
+    right: 0px;
+}
+.img.active{
+    opacity: 1;
+    z-index: 10;
+}
+.point_list{
+    cursor: pointer;
+    list-style: none;
+    position: absolute;
+    right: 370px;
+    bottom: 30px;
+    z-index: 1000;
+}
+.point{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+.point.active{
+    background-color:white;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>轮播</title>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li class="img active">第一张图片</li>
+            <li class="img">第二张图片</li>
+            <li class="img">第三张图片</li>
+            <li class="img">第四张图片</li>
+            <li class="img">第五张图片</li>
+        </ul>
+        <ul class="point_list">
+            <li class="point active" data-num='0'></li>
+            <li class="point" data-num='1'></li>
+            <li class="point" data-num='2'></li>
+            <li class="point" data-num='3'></li>
+            <li class="point" data-num='4'></li>
+        </ul>
+        <button type="button" class="btn" id="golast"><</button>
+        <button type="button" class="btn" id="gonext">></button>
+    </div>
+    <script>
+        var imgs = document.getElementsByClassName('img');//获取图片
+        var points = document.getElementsByClassName('point');//获取点
+        var goLastBtn = document.getElementById('golast');
+        var goNextBtn = document.getElementById('gonext');
+
+        var index = 0;//index代表显示哪一张图片
+        var time = 0;//定时器计时
+
+        //清除active
+        function clearActive(){
+            for(var i = 0; i<imgs.length; i++){
+                imgs[i].className = "img";
+            }
+            for(var i = 0; i<points.length; i++){
+                points[i].className = "point";
+            }
+        }
+        //修改类名
+        function goIndex(){
+            clearActive();
+            imgs[index].className = "img active";
+            points[index].className = "point active";
+        }
+        //显示下一张图片
+        function goNext(){
+            if(index < 4){
+                index++;
+            }else{
+                index = 0;
+            }
+            goIndex();
+        }
+        //显示上一张图片
+        function goLast(){
+            if (index <= 0) {
+                index = 4
+            }else{
+                index--;
+            }
+            goIndex();
+            }
+        //添加事件
+        goNextBtn.addEventListener('click',function(){
+            goNext();
+        })
+        goLastBtn.addEventListener('click',function(){
+            goLast();
+        })
+        //获取每个点的数据，在显示对应的图片
+        for(var i = 0;i < points.length; i++){
+            points[i].addEventListener('click',function(){
+                index = this.getAttribute('data-num');
+                goIndex();
+                time = 0;
+            })
+        }
+        //定时器，图片自动跳转
+        setInterval(function(){
+            time++;
+            if(time == 10){
+                goNext();
+                time = 0;
+            }
+        }, 200);
+    </script>
+</body>
+</html>
