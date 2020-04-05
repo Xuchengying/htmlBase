@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .content{
+            position: relative;
+            width: 500px;
+            height: 400px;
+        }
+        .content div{
+            position: relative;
+            margin: auto auto;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+        .img_one{
+            position: absolute;
+            top: 80px;
+            background: burlywood;
+        }
+        .img_two{
+            position: absolute;
+            left: 30px;
+            bottom: 40px;
+            background: cadetblue;
+        }
+        .img_three{
+            position: absolute;
+            left: 60px;
+            bottom: 160px;
+            background:brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="img_one active">感恩</div>
+        <div class="img_two">无畏</div>
+        <div class="img_three">创新</div>
+    </div>
+
+</body>
+</html>

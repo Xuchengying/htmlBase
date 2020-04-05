@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin:0px;
+        padding: 0px;
+    }
+    .wrap{
+        position: relative;
+        left: 400px;
+        width: 600px;
+        height: 400px;
+    }
+    .list{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        list-style: none;
+        text-align: center;
+        letter-spacing: 6px;
+    }
+    .img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .img:nth-child(1){
+        top: 90px;
+        left: 180px;
+        background-color: salmon;
+    }
+    .img:nth-child(2){
+        top: 120px;
+        left: 200px;
+        background-color: pink;
+    }
+    .img:nth-child(3){
+        top: 150px;
+        left: 220px;
+        background-color: cadetblue;
+    }
+    .btn{
+        cursor: pointer;
+        position: absolute;
+        top: 320px;
+        left: 240px;
+        width: 100px;
+        background-color: white;
+        border-color: non;
+        opacity: 0.8;
+    }
+    .img.active{
+        z-index: 10;
+}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li class="img">感恩</li>
+            <li class="img">无畏</li>
+            <li class="img">创新</li>
+        </ul>
+        <button type="button" class="btn" id="gonext">欢迎点击</button>
+    </div>
+    <script>
+        var imgs = document.getElementsByClassName('img');//获取图片
+        var goNextBtn = document.getElementById('gonext');
+
+        var index = 0;//index代表显示哪一张图片
+
+        //修改类名
+        function goIndex(){
+            for(var i = 0; i<imgs.length; i++){
+                imgs[i].className = "img";
+            }
+            imgs[index].className = "img active";
+        }
+        
+        //显示下一张图片
+        function goNext(){
+            if(index < 2){
+                index++;
+            }else{
+                index = 0;
+            }
+            goIndex();
+        }
+        //添加事件
+        goNextBtn.addEventListener('click',function(){
+            goNext();
+        })
+    </script>
+</body>
+</html>

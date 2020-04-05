@@ -1,0 +1,240 @@
+hr {
+    border-top: 1px solid #ddd;
+}
+
+body.page-header-fixed{
+    padding-top: 104px !important;
+}
+
+.content-page p {
+    line-height: 22px;
+}
+
+.stx-top-news-box .service-box-heading{
+    float: left;
+    width: 100%;
+    display: table;
+}
+
+.stx-top-news-box .service-box-heading i {
+    width: 40px;
+    height: 40px;
+    float:left;
+    background-color: #fff;
+    line-height: 36px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 100%;
+    font-style: normal;
+    margin: 5px 0px;
+}
+
+.stx-top-news-box .service-box-heading .stx-top-news-title {
+    margin-bottom: 0px;
+    margin-left: 0px;
+	font-size: 18px;
+    font-weight: 100;
+    width: 100%;
+    padding-left: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.stx-top-news-box>div>p{
+	padding: 0 5px;
+    font-size: 14px;
+    text-align: left;
+    clear: both;
+}
+
+.stx-job .owl-buttons {
+    left: auto;
+    right: 0px;
+    top: -40px;
+}
+
+.stx-job .recent-work-item {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.stx-trg {
+    background-color:#dddddd;
+}
+.stx-trg .service-box .service-box-heading{
+    text-align: center;
+}
+.stx-trg .service-box .service-box-heading span{
+    margin: 0;
+    color: #E02222;
+}
+
+.stx-trg .service-box p{
+    text-align: center;
+}
+
+.stx-pre-footer{
+    background-color: #fff;
+}
+.stx-pre-footer p img{
+    width: 110px;
+    height: 110px;
+}
+
+.stx-footer {
+    background-color: #E02222;
+}
+.stx-footer .padding-top-10{
+    opacity: 1;
+}
+
+
+
+/*detail page*/
+.stx-sidebar h2{
+    color: #E02222;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid #E02222;
+}
+
+.stx-sidebar h3{
+    color: #E02222;
+    padding-bottom: 2px;
+}
+
+.stx-blog-title{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+}
+.stx-blog-title span{
+    border-bottom: 2px solid #E02222;
+}
+
+.stx-teacher .blog-info li, .stx-teacher .blog-info li i{
+    font-size: 16px;
+}
+
+.stx-teacher p {
+    margin-bottom: 10px;
+}
+
+.stx-mix-filter a.btn{
+    margin-bottom: 5px;
+}
+
+.stx-mix-filter a.btn.active,
+.stx-mix-filter a.btn.default:hover {
+    color: #fff;
+    background: #e44f00;
+}
+
+.stx-portfolio-video .mix-grid .mix a.mix-link{
+    margin-right: -21px;
+}
+.stx-portfolio-video-container{
+    margin-top: 10px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.stx-portfolio-video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.stx-enterprise .mix-grid .mix .mix-details{
+    height: 50px;
+    opacity: 0.8;
+    background-color: #000;
+}
+
+.stx-enterprise .mix-grid .mix .mix-details h4 {
+    margin: 0;
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+.stx-employment .mix-grid .mix .mix-details{
+    height: 50px;
+    bottom: 0;
+    opacity: 0.8;
+    background-color: #000;
+}
+
+.stx-employment .mix-grid .mix .mix-details h4 {
+    margin: 0;
+    font-size: 13px;
+    padding: 6px 0 0 6px;
+    text-align: left;
+}
+
+@media only screen and (min-width: 992px){
+    h3.stx-news-title{
+        padding-top: 0;
+    }
+}
+
+h3.stx-news-title a{
+    color: #E02222;
+}
+
+.stx-news-keynote{
+	line-height: 22px;
+    font-size: 14px;
+}
+
+
+/**
+移动端样式
+ */
+@media only screen and (min-width: 320px) and (max-device-width: 667px) {
+    .site-logo {
+        width: 200px;
+    }
+
+    .stx-top-news-box .service-box-heading .stx-top-news-title {
+        font-size: 18px;
+        width: 86%;
+        padding-left: 4px;
+        text-align: left;
+    }
+
+    .stx-spark-name, .stx-spark-info {
+        text-align: center;
+    }
+
+    .stx-teacher>div>h2, .stx-teacher .blog-info{
+        text-align: center;
+    }
+}
+
+
+.stx-spark-img{
+    margin-bottom: 5px;
+}
+
+.stx-spark-name {
+    color: #E02222;
+}
+
+.stx-spark-info {
+    color: #717171;
+    font-size: 13px;
+}
+
+h4.stx-spark-duty-title{
+    margin-bottom: 15px;
+}
+
+.stx-spark-duty-content>li {
+    margin-bottom: 7px;
+}
