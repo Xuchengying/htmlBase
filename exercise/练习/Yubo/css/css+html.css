@@ -1,0 +1,42 @@
+#container
+    {
+    	width:100%;height:500px ; background-color:white;
+    	text-align: start;
+    	
+    }
+    #Header
+    {
+    	width:800px;height:100px;background-color: white
+    }
+    #PageBody
+    {
+    	width:800px;height:400px;background-color: white;
+    }
+    #Sidebar
+    {
+    	background-color: white;
+    	padding-top: 50px;
+    	width: 205px; height: 400px;
+    	float: left;
+    }
+    #MainBody
+    {
+    	font:12px Tahoma;margin:0px;text-align:center;background-color: white;
+    }
+    #Footer
+    {
+    	width: 100; height:50px;background-color: #000000;
+    
+    }
+    #p1
+    {
+    	padding-top: 50px;
+    	float: left;
+    }
+    #p2
+    {
+       position: absolute;
+       top: auto;
+      left: 210px;
+    	float: left;	
+    }

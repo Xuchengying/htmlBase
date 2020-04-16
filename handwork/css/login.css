@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.bg-img{
+    height: 100vh;
+    background: url('../imgs/1.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-img:after{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0 ,0.4);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 20px;
+    background: rgba(225,225,225,0.01);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0 ,0.3);
+    text-align: center;
+    z-index: 888;
+}
+.fa-user-circle{
+    color:white;
+    font-size: 70px;
+    font-weight: 400;
+}
+.content header{
+    margin: 20px 0;
+    color:white;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.filed{
+    display: flex;
+    background: rgba(255, 255, 255 ,0.94);
+    position: relative;
+    height: 45px;
+    width: 100%;
+}
+.filed span{
+    width: 40px;
+    line-height: 45px;
+    color: #222;
+}
+.filed input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+}
+.space{
+    margin-top: 16px;
+}
+.show{
+    display: none;
+    position: absolute;
+    right: 15px;
+    color: #222;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.password:valid ~ .show{
+    display: block;
+}
+.pass{
+    margin: 10px 0;
+    text-align: left;
+}
+.pass a{
+    color: white;
+    font-family: "Popins",sans-serif;
+    text-decoration: none;
+}
+.pass a:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    border: 1px solid #222;
+    background: pink;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background: palevioletred;
+}
+.login{
+    margin: 20px 0;
+    color: white;
+}
+.link{
+    display: flex;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+}
+.link a{
+    color: white;
+}
+.link a:hover{
+    color: grey;
+}
+.qq, .weibo{
+    width: 160px;
+    height: 42px;
+    line-height: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.qq{
+    margin-left: 0px;
+    background: palevioletred;
+}
+.weibo{
+    background: rgb(156, 55, 89);
+}
+.link span{
+    margin-left: 8px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.signup{
+    color: white;
+    font-size: 15px;
+}
+.signup a{
+    color: rgb(248, 20, 96);
+    text-decoration: none;
+}
+.signup a:hover{
+    color: grey;
+}

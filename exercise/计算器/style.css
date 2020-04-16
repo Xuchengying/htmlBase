@@ -11,8 +11,8 @@ body{
     background-color: black;
 }
 .Calculator{
-    position: relative;
     display: grid;
+    position: relative;
 }
 .Calculator .value{
     grid-column: span 4;

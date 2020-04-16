@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金字塔</title>
+</head>
+<body>
+    
+<div id="div1"></div>
+<script>
+   function printJzt(){
+       var s = "<h2 align='center'>金字塔</h2>"
+       for(var i = 0;i <= 30;i++){
+           s += "<hr align='center' width=" + i + "% />";
+       }
+       document.getElementById("div1").innerHTML= document.getElementById("div1").innerHTML+s;
+   }
+</script>
+
+<input type="button" value="金字塔" onclick="printJzt()"/>
+
+</body>
+</html>
