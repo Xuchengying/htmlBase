@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .parent{
+            display: flex;
+            height: 500px;
+            background: brown;
+            flex-wrap: wrap-reverse;
+        }
+        .child{
+            border: 1px solid rebeccapurple;
+            background: chartreuse;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+    </div>
+   
+</body>
+</html>

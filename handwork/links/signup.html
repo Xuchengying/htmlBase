@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <!-- 图标的连接 -->
+    <link rel="stylesheet" href="../imgs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <!-- multistep form -->
+<form id="signform">
+    <!-- progressbar -->
+        <ul id="progressbar">
+            <li class="active">账号设置</li>
+            <li>个人详细信息</li>
+            <li>确认登录</li>
+        </ul>
+    <!-- fieldsets -->
+        <fieldset>
+            <h2 class="fs-title">账号设置</h2>
+            <h3 class="fs-subtitle">创建你的账号</h3>
+            <span>*用户名称：</span><input type="text" name="username" required placeholder="" /> <br>
+            <span id="usernameID"></span>
+            <span>用户头像：</span><input type="file" name="headimg" placeholder="头像" /><br>
+            <span>*设置密码：</span><input type="password" name="pass" required placeholder="第一个字必须为字母6~16位" /><br>
+            <span>*确认密码：</span><input type="password" name="cpass" required placeholder="请输入与上面一致" /><br>
+            <input type="button" name="next" class="next action-button" value="下一步" onclick="nextbtn(this,1);" />
+            <p>*为必填项，请认真填写</p>
+        </fieldset>
+        <fieldset>
+            <h2 class="fs-title">个人详细信息</h2>
+            <h3 class="fs-subtitle">个人详细信息是保密的，不会被泄露</h3>
+            <span>*昵称：</span><input type="text" name="nickname" required placeholder="昵称" /><br>
+            <span>性别：</span>
+            <span><i class="fa fa-male" aria-hidden="true"></i>男</span><input type="radio" name="sex" />
+            <span><i class="fa fa-female" aria-hidden="true"></i>女</span><input type="radio" name="sex" /><br>
+            <span>生日：</span><input type="text" name="birthday" placeholder="2000.04.20" /><br>
+            <span>*电话：</span><input type="text" name="phone" required placeholder="11位" /><br>
+            
+            <input type="button" name="previous" class="previous action-button" value="上一步" onclick="prevbtn(this,1);"/>
+            <input type="button" name="next" class="next action-button" value="下一步" onclick="nextbtn(this,2);"/>
+            <p>*为必填项，请认真填写</p>
+        </fieldset>
+        <fieldset>
+            <h2 class="fs-title">确认登录</h2>
+            <h3 class="fs-subtitle">填写邮箱并激活账号</h3>
+            <span>*邮箱地址：</span><input type="text" name="email" required placeholder="123@qq.com" /><br>
+            <span>*激活账号：</span><input type="text" name="activeCode" required placeholder="邮箱激活码" /><br>
+            <span>登录状态：</span>
+            <span>在线</span><input type="radio" name="state" />
+            <span>隐身</span><input type="radio" name="state" />
+            <span>忙碌</span><input type="radio" name="state" /><br>
+            <input type="button" name="previous" class="previous action-button" value="上一步" onclick="prevbtn(this,2);"/>
+            <input type="submit" name="submit" class="submit action-button" value="提交"/>
+            <p>*为必填项，请认真填写</p>
+        </fieldset>
+</form>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

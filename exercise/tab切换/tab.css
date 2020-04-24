@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    margin-top:50px;
+    text-align: center;
+}
+.tabbox{
+    margin: 40px auto;
+    height: 400px;
+    width: 1000px;
+    border:2px solid pink;
+    font-size: 20px;
+}
+.nav ul{
+    height: 50px;
+    width: 100%;
+    border-bottom:1px solid lightgray;
+}
+.nav ul li{
+    float: left;
+    list-style: none;
+    height: 100%;
+    width: 100px;
+    border-right:1px solid lightgray;
+    text-align: center;
+}
+.nav ul span{
+    position: relative;
+    top: 10px;
+}
+.nav ul li i{
+    float: right;
+    font-size: 1px;
+    cursor: pointer;
+}
+.tabadd{
+    position: relative;
+    left: 960px;
+    bottom: 38px;
+}
+.tabadd span{
+    border:1px solid lightgray;
+    background-color: lightgray;
+    text-align: center;
+    cursor: pointer;
+}
+.nav ul li.liactive{
+    border-bottom: none;
+}
+.clear{
+    clear: both;
+}

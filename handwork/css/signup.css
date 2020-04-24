@@ -1,0 +1,172 @@
+/*清除所有元素的内外边距*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	background: url('../imgs/bg.png');
+	background-size: cover;
+	background-position: center;
+}
+
+body:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 120%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*表单样式*/
+#signform {
+	position: relative;
+	width: 450px;
+	margin: 60px auto;
+	text-align: center;
+	z-index: 999;
+}
+
+#signform fieldset {
+	position: absolute;
+	width: 80%;
+	margin: 0 10%;
+	padding: 20px 30px;
+	border: 0 none;
+	border-radius: 3px;
+	background: rgba(225, 225, 225, 0.01);
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+}
+
+/*隐藏除了第一个控件组的所有控件组*/
+#signform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+/* span标签的样式 */
+#signform span{
+	color: white;
+	font-size: 15px;
+	font-weight: 400;
+}
+/* 图标的样式 */
+#signform span i{
+	margin: 0px 14px;
+	font-size: 30px;
+	font-weight: 400;
+}
+.fa-male{
+	color: black;
+}
+.fa-female{
+	color: palevioletred;
+}
+
+/*所有输入框的基本样式*/
+#signform input{
+	width: 70%;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: black;
+	font-size: 13px;
+}
+/* 单选框的样式 */
+#signform input[ name="sex"]{
+	width: 14%;
+}
+#signform input[ name="state"]{
+	width: 12%;
+}
+/*按钮的样式*/
+#signform .action-button {
+	width: 100px;
+    border: 1px solid lightpink;
+    background: palevioletred;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#signform .action-button:hover{
+    background: rgb(156, 55, 89);
+}
+/* 标题样式 */
+.fs-title {
+	margin-bottom: 10px;
+	color:white;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+	text-transform: uppercase;
+}
+.fs-subtitle {
+	color: white;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+/*进度条*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS 选择器计数器*/
+	counter-reset: step;
+}
+/* li标签的样式 */
+#progressbar li {
+	list-style-type: none;
+	position: relative;
+	float: left;
+	width: 33.33%;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+}
+/* li标签选择前的样式 */
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	display: block;
+	width: 20px;
+	line-height: 20px;
+	margin: 0 auto 5px auto;
+	background: white;
+	border-radius: 3px;
+	color:#222;
+}
+/*进度条连接器*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1;/*放在数字的后面*/
+}
+
+#progressbar li:first-child:after {
+	/*第一步前面不需要连接器*/
+	content: none;
+}
+
+/*设置活动状态*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+	background: palevioletred;
+	color: white;
+}
+p{
+	color: red;
+}

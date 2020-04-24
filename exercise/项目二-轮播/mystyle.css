@@ -3,9 +3,9 @@
     padding: 0px;
 }
 .wrap{
+    position: relative;
     width: 800px;
     height: 400px;
-    position: relative;
 }
 .list{
     width: 800px;
