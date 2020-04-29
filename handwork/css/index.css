@@ -1,6 +1,120 @@
 .main{
     height: 1000px;
     width: 80%;
-    margin: auto;
-    border: 2px solid black;
+    margin: 20px auto;
+    z-index: 667;
+}
+.mainTitle{
+    margin:10px 36%;
+}
+.mainTitle span{
+    color: lightpink;
+    font-size: 30px;
+    font-style: italic;
+}
+/* 首页的轮播和时钟效果 */
+.titleShow{
+    display: flex;
+    width: 100%;
+    height: 352px;
+    margin-top: 30px;
+    background: #f6f7fb;
+}
+/* 轮播效果 */
+.titleLeft{
+    position: relative;
+    width: 65%;
+    height: 350px;
+}
+.list{
+    position: relative;
+    width: 700px;
+    height: 350px;
+    list-style: none;
+}
+.titleLeft li{
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .8s;
+}
+img{
+    width: 700px;
+    height: 350px;
+}
+/* 按钮的样式 */
+.btn{
+    position: absolute;
+    top: 0px;
+    width: 60px;
+    height: 100%;
+    border: none;
+    background-color: white;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 666;
+}
+.btn:hover{
+    border: none;
+    background-color: lightgray;
+    opacity: 1;
+}
+#golast{
+    left: 0px;
+}
+#gonext{
+    right: 0px;
+}
+.img.active{
+    opacity: 1;
+    z-index: 10;
+}
+/* 小圆点的样式 */
+.point_list{
+    position: absolute;
+    right: 290px;
+    bottom: 20px;
+    list-style: none;
+    cursor: pointer;
+    z-index: 666;
+}
+.point{
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+.point.active{
+    background-color:white;
+}
+
+/* 时钟的样式 */
+.titleRight{
+    position: relative;
+    width: 30%;
+    height: 350px;
+    margin: 20px;
+
+}
+.titleRight span{
+    margin-left:120px;
+    color: #fb7280;
+    font-size: 20px;
+}
+.img1{
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+   background-image: url(/handwork/imgs/3.jpg);
 }

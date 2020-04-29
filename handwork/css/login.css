@@ -92,13 +92,16 @@
 .pass input{
     height: 19px;
 }
+.pass input[value="记住密码"]{
+    margin-left: 40px;
+}
 .pass span{
     margin-left: 5px;
     color: white;
     font-family: "Popins",sans-serif;
 }
 .pass a{
-    margin-left: 150px;
+    margin-left: 50px;
     color: white;
     font-family: "Popins",sans-serif;
     text-decoration: none;

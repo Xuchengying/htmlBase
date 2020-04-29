@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钟表</title>
+    <style>
+        canvas{
+            position: absolute;
+            left: 10;
+            top: 10;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="dial_canvas"></canvas>
+    <canvas id="hand_canvas"></canvas>
+
+    <script>
+    var w = 800;
+    var h = 600;
+    var r = 200;
+
+    var dial_canvas = document.getElementById('dial_canvas');
+    var hand_canvas = document.getElementById('hand_canvas');
+
+    dial_canvas.width = w;
+    dial_canvas.height = h;
+    hand_canvas.width = w;
+    hand_canvas.height = h;
+
+    var dial_cxt = dial_canvas.getContext('2d');
+    var hand_cxt = hand_canvas.getContext('2d');
+
+    dial_cxt.beginPath();
+    dial_cxt.arc(w/2,h/2,r,0,Math.PI*2);
+    dial_cxt.lineWidth = 10;
+    dial_cxt.strokeStyle = 'black';
+    dial_cxt.stroke();
+
+    drawScale(dial_cxt,w/2,h/2,r,r-20,12,10);
+    drawScale(dial_cxt,w/2,h/2,r,r-10,60,2);
+
+    function run(){
+        var date = new Date();
+
+        hand_cxt.clearRect(0,0,w,h);
+
+        var seconds = date.getSeconds();
+        drawHand(hand_cxt, w/2, h/2, seconds / 60 * 360, 180, 2, "red");
+
+        var minutes = date.getMinutes()+seconds / 60;
+        drawHand(hand_cxt,w/2,h/2,minutes/60*360,150,5,"#000");
+
+        var hours = date.getHours()%12 + minutes / 60;
+        drawHand(hand_cxt, w/2,h/2,hours / 12 * 360,120,8,"#000");
+        setTimeout(run,1000);
+    }
+
+    run();
+
+function drawHand(cxt, x, y, angle, length, lineWidth=8, strokeStyle="#000"){
+    cxt.save();
+    cxt.beginPath();
+    cxt.translate(x,y);
+    cxt.rotate((angle - 90)/180 * Math.PI);
+    cxt.moveTo(-20,0);
+    cxt.lineTo(length,0);
+    cxt.lineWidth = lineWidth;
+    cxt.strokeStyle = strokeStyle;
+    cxt.stroke();
+    cxt.restore();
+}
+
+function drawScale(cxt,x,y,innerRadius,outerRadius, number = 12, lineWidth = 10, strokeStyle = "#000"){
+            var angle = 0;
+            var angleDiff = 360 / number;  
+            for (var i = 0; i < number; i ++) {
+                var x1 = Math.cos(angle / 180 * Math.PI) * outerRadius + w/2;
+                var y1 = Math.sin(angle / 180 * Math.PI) * outerRadius + h/2;
+                var x2 = Math.cos(angle / 180 * Math.PI) * innerRadius + w/2;
+                var y2 = Math.sin(angle / 180 * Math.PI) * innerRadius + h/2;
+
+
+                cxt.beginPath();
+                cxt.moveTo(x1, y1);
+                cxt.lineTo(x2, y2);
+                cxt.lineWidth = lineWidth;
+                cxt.strokeStyle = strokeStyle
+                
+                cxt.stroke();
+
+                angle += angleDiff;
+            }
+        }
+
+    </script>
+</body>
+</html>

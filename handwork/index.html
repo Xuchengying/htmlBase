@@ -13,23 +13,61 @@
     <!-- Heading Begin -->
     <div class="header">
         <div class="headerContent">
-            <div class="header_name"><i class="fa fa-scissors" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<span>第一手工</span></div>
-            <div class="nav">
-               <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="#">忆手工</a></li>
-                <li><a href="#">教程</a></li>
-                <li><a href="#">作品集</a></li>
-                <li><a href="#">手工论坛</a></li>
-                <li><a href="/handwork/links/login.html" target="_blank">登录注册</a></li>
-               </ul>
+            <div class="header_name"><span>第一手工</span></div>
+            <div class="menu">
+                <div class="itemOne">
+                    <h3><a href="index.html">首页</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">忆手工<span id="up"></span> </a></h3>
+                    <div class="itemTwo">
+                        <ul>
+                            <li><a href="#">雕塑雕刻</a></li><hr>
+                            <li><a href="#">黏土陶艺</a></li><hr>
+                            <li><a href="#">刺绣</a></li><hr>
+                            <li><a href="#">美食烘焙</a></li><hr>
+                            <li><a href="#">皮艺</a></li><hr>
+                            <li><a href="#">木艺</a></li><hr>
+                            <li><a href="#">布艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">手工教程</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">作品集<span id="up"></span> </a></h3>
+                    <div class="itemTwo">
+                        <ul>
+                            <li><a href="#">雕塑雕刻</a></li><hr>
+                            <li><a href="#">黏土陶艺</a></li><hr>
+                            <li><a href="#">刺绣</a></li><hr>
+                            <li><a href="#">美食烘焙</a></li><hr>
+                            <li><a href="#">皮艺</a></li><hr>
+                            <li><a href="#">木艺</a></li><hr>
+                            <li><a href="#">布艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">集市</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">广场论坛</a></h3>
+                </div>
             </div>
+            <!-- 搜索框 -->
             <div class="searchBox">
-             <input type="text" placeholder="搜索教程、用户" onkeypress="sgk_search_tab(event)"/>
-             <span id="search" ><i class="fa fa-search" aria-hidden="true"></i></span>
+               <input type="text" placeholder="搜索教程、用户" onkeypress="sgk_search_tab(event)"/>
+               <span id="search" ><i class="fa fa-search" aria-hidden="true"></i></span>
             </div>
-            <div class="setting"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></div>
-           <div class="clear"></div>
+            <!-- 登录注册 -->
+            <div class="nav-user-center">
+                <div class="item"><a href="/handwork/links/login.html" target="_blank">登录</a></div>
+                <div class="item"><a href="/handwork/links/signup.html" target="_blank">注册</a></div>
+                <div class="itemPlus"><a href="#" target="_blank">投稿</a></div>
+            </div>
+            <!-- <div class="clear"></div> -->
         </div>
     </div>
     <!-- Heading End -->
@@ -37,7 +75,46 @@
     
     <!-- Main Begin -->
     <div class="main">
-       
+        <div class="mainTitle">
+            <span>欢迎***来到第一手工</span>
+        </div>
+        <div class="mainContent">
+            <!-- 轮播和时钟 -->
+            <div class="titleShow">
+                <div class="titleLeft">
+                    <ul class="list">
+                        <li class="img active"><img src="/handwork/imgs/1.jpg" alt=""></li>
+                        <li class="img"><img src="/handwork/imgs/2.jpg" alt=""></li>
+                        <li class="img"><img src="/handwork/imgs/3.jpg" alt=""></li>
+                        <li class="img"><img src="/handwork/imgs/4.jpg" alt=""></li>
+                        <li class="img"><img src="/handwork/imgs/5.jpg" alt=""></li>
+                    </ul>
+                    <ul class="point_list">
+                        <li class="point active" data-num='0'></li>
+                        <li class="point" data-num='1'></li>
+                        <li class="point" data-num='2'></li>
+                        <li class="point" data-num='3'></li>
+                        <li class="point" data-num='4'></li>
+                    </ul>
+                    <button type="button" class="btn" id="golast">
+                        <</button> <button type="button" class="btn" id="gonext">>
+                    </button>
+                </div>
+                <div class="titleRight">
+                    <span>小英子社区</span>
+                    <div class="img1"></div>
+                </div>
+            </div>
+            <!-- 手工教程 -->
+            <div class="teach">
+
+            </div>
+
+
+
+        </div>
+
+
     </div>
 
 
@@ -55,5 +132,11 @@
     <!-- Footer End -->
 
 
+
+    <a href="#" id="toTop" style="margin-right: -596.5px; right: 50%; display: inline;">
+        <span id="toTopHover" style="opacity: 0;"></span>
+    </a>
+    <!-- JavaScript -->
+    <script src="/handwork/js/index.js"></script>
 </body>
 </html>

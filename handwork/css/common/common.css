@@ -3,70 +3,149 @@
     margin: 0px;
     padding: 0px;
 }
-body{
-    background-color: ivory;
-}
+/* 头部容器 */
 .headerContent{
-    position: fixed;
+    display: flex;
     width: 100%;
-    height: 50px;
-    background:pink;
+    height: 60px;
+    border-bottom: 1px solid lightgray;
 }
+/* header标题样式 */
 .header_name{
-    float: left;
-    margin: 0px 220px 0px 180px;
-    color:white;
+    width: 120px;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 100px;
+    color: #fb7299;
+}
+.header_name span{
     font-size: 30px;
-    font-weight: 400;
     font-style: italic;
 }
-.nav ul li{
+/* 菜单栏 */
+.menu{
+    width:500px;
+    margin: 20px 30px;
+    z-index: 999;
+}
+/* 菜单栏一级菜单样式 */
+.itemOne{
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+.itemOne h3 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: lightgray;
+}
+.itemOne h3 a:hover{
+    color: pink;
+}
+#up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid lightgrey;
+}
+/* 菜单栏二级菜单样式 */
+.itemTwo{
+    width: 200%;
+    height: 0px;
+    overflow: hidden;
+    background: white;
+    /* transition-property: height;
+    transition-duration: 1s; */
+}
+.itemTwo ul{
+    margin-top: 20px;
     list-style: none;
-    float: left;
-    margin:5px 10px;
+    border: 1px dashed pink;
 }
-.nav,a{
-    color: #ec2c64;
-    font-size: 15px;
+.itemTwo ul li{
+    padding: 5px;
+}
+.itemTwo a{
+    display: block;
     text-decoration: none;
+    width: 100%;
+    color: black;
+
 }
-.nav,a:hover{
-    margin-top: 10px;
-    color: white;
-    font-size: 16px;
+.itemTwo a:hover{
+    display: block;
     text-decoration: none;
+    width: 100%;
+    color: lightgray;
 }
+.itemOne:hover .itemTwo{
+    height: auto;
+}
+/* 搜索框样式 */
 .searchBox{
-    float: left;
-    margin-left: 10px;
-    width: 150px;
-    height: 25px;
-    border: 1px solid white;
-    background-color: white;
+    width: 170px;
+    height:18px ;
+   margin-top: 20px;
+   border: 1px solid lightgray;
 }
 .searchBox input{
-    width: 125px;
-    height: 23px;
-    border: 1px solid white;
+    width: 150px;
+    height: 16px;
+    border: none;
 }
-.searchBox span{
-    color: gray;
-    font-size: 15px;
+.searchBox i{
+    color: lightgray;
     cursor: pointer;
 }
-.setting{
-    float: right;
-    margin-right:160px;
+/* 登录注册样式 */
+.nav-user-center{
+    display: flex;
+    margin-left: 30px;
 }
-.setting a{
-    font-size: 20px;
+.item{
+    margin: 20px 10px;
 }
-.fa-cog a:hover{
-    font-size: 20px;
+.item a{
+    text-decoration: none;
+    font-size: 15px;
+    color: wheat;
 }
-.clear{
+.item a:hover{
+    color: pink;
+}
+/* 投稿的样式 */
+.itemPlus{
+    width: 100px;
+    height: 36px;
+    margin-top: 12px;
+    margin-left: 40px;
+    background: pink;
+}
+.itemPlus a{
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 36px;
+    border-radius: 2px;
+    background: #fb7299;
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.itemPlus a:hover{
+    color: lightgray;
+}
+/* .clear{
     clear: both;
-}
+} */
 
 /* footer */
 
