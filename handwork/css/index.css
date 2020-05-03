@@ -99,7 +99,7 @@ img{
     background-color:white;
 }
 
-/* 时钟的样式 */
+/* 社区 */
 .titleRight{
     position: relative;
     width: 30%;
@@ -118,3 +118,135 @@ img{
     margin: 30px auto;
    background-image: url(/handwork/imgs/3.jpg);
 }
+
+
+/* 展示区 */
+.teach{
+    margin-top: 50px;
+}
+/* 展示区标题样式 */
+.line-title {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.w1000 {
+    width: 100%;
+    margin: 10px auto;
+}
+.line-title span {
+    font-size: 18px;
+}
+.line-title span {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    padding: 0 25px;
+    background: #fff;
+    z-index: 2;
+}
+.line-title b {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 12px;
+    font-size: 0;
+    line-height: 0;
+    border-top: 1px solid #d5d4d3;
+    z-index: 1;
+}
+/* 展示区副标题 */
+.line-sub-title {
+    position:relative;
+    padding-bottom: 20px;
+    color: #666;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.line-sub-title p {
+    margin-bottom: 10px;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before {
+    content: "\0020";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.fr {
+    position:absolute; 
+    right:0;
+    top:0;
+}
+.crafter-more a {
+    width: 50px;
+    color: #63a485;
+    font-size: 15px;
+}
+a[href] {
+    text-decoration: none;
+    cursor: pointer;
+}
+.fr i{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.clearfix:after {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    content: "\20";
+    clear: both;
+}
+.Content{
+    display: flex;
+    margin: 0px 30px;
+    flex-wrap: wrap;
+}
+.wrap{
+    width: 350px;
+    height: 300px;
+}
+video{
+    width: 300px;
+    height: 200px;
+}
+.wrap-info p{
+    position:relative;
+    margin: 10px 0px;
+    color: #666;
+    letter-spacing: 1px;
+}
+hr{
+    width: 300px;
+}
+.comment{
+    margin:8px 0px 0px 160px;
+}
+.comment span{
+    margin:0px 8px;
+    font-size: 10px;
+}
+.Content img{
+    width: 300px;
+    height: 200px;
+}
+
+/* 广场论坛 */
+.circleConLBox {
+    width: 598px;
+    height: 300px;
+    background: #fff;
+    height: auto;
+}
+
+
