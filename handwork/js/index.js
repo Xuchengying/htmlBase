@@ -64,3 +64,9 @@ var imgs = document.getElementsByClassName('img');//获取图片
             }
         }, 300);
         
+
+        // 广场论坛调节div的高度
+        for (let i = 0; i < Array.length; i++) {
+            var ulHeight = document.getElementById("chageHeight").clientHeight;
+            console.log("第"+(i+1)+"个ul的高度："+ulHeight);
+        }

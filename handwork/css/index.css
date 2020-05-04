@@ -1,5 +1,4 @@
 .main{
-    height: 1000px;
     width: 80%;
     margin: 20px auto;
     z-index: 667;
@@ -135,7 +134,7 @@ img{
 }
 .w1000 {
     width: 100%;
-    margin: 10px auto;
+    margin: 20px auto 10px;
 }
 .line-title span {
     font-size: 18px;
@@ -161,7 +160,7 @@ img{
 /* 展示区副标题 */
 .line-sub-title {
     position:relative;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     color: #666;
     text-align: center;
     letter-spacing: 1px;
@@ -242,11 +241,130 @@ hr{
 }
 
 /* 广场论坛 */
-.circleConLBox {
-    width: 598px;
+.circleBox {
+    width: 100%;
     height: 300px;
     background: #fff;
     height: auto;
 }
-
-
+.circleBox div{
+    display: block;
+}
+.circleList {
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 20px;
+    position: relative;
+}
+/* 头像区 */
+.circleListL {
+    width: 80px;
+    float: left;
+}
+.circleListL a {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 20px auto 0;
+    border-radius: 21px;
+}
+.circleListL a img {
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+}
+.fixed {
+    display: block;
+    min-height: 1%;
+}
+a, a:link {
+    text-decoration: none;
+}
+/* 右边 */
+.circleListR {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    width: 500px;
+    height: 480px;
+}
+.Username {
+    color: #000;
+    display: block;
+    margin-top: 23px;
+}
+.size14 {
+    font-size: 14px;
+}
+.subject {
+    width: 500px;
+    line-height: 20px;
+    color: #222;
+    margin-top: 5px;
+}
+.sCirclePic {
+    margin-top: 15px;
+}
+.sCirclePic img {
+    width: 200px;
+    border: 0 none;
+    vertical-align: top;
+}
+.sCirclePic ul {
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+}
+.sCirclePic ul li img{
+    width: 153px;
+    height: 153px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.hui-one {
+    color: #999;
+}
+.hui-four {
+    color: #222;
+}
+.Otherinfo{
+    margin-top: 15px;
+}
+.Info {
+    margin-left: 30px;
+}
+.Otherinfo ul {
+    float: right;
+    margin-right: -17px;
+}
+.Otherinfo ul li {
+    padding: 0 17px;
+    float: left;
+    border-right: 1px solid #c7c7c7;
+}
+li {
+    list-style-type: none;
+}
+.fense {
+    color: #ff6699;
+}
+.fixed:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+/* 查看更多 */
+.circleMore {
+    width: 500px;
+    height: 40px;
+    background: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 5px;
+}
+.circleMore a {
+    margin-left: 30px;
+    font-size: 14px;
+    color: #ff6699;
+}

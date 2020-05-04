@@ -143,13 +143,25 @@
 .itemPlus a:hover{
     color: lightgray;
 }
-/* .clear{
-    clear: both;
-} */
+
 
 /* footer */
-
-
+.footer{
+    width: 100%;
+    height: 80px;
+    background: lightgray;
+}
+.footerContent p{
+    padding-top: 10px;
+}
+.footerContent a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+.center{
+    text-align: center;
+}
 
 
 
