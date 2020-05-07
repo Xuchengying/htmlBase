@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       textarea{
+  padding:10px;
+}
+    </style>
+</head>
+<body>
+    <h3>强制下列的评论框中至少有 20 个字符</h3>
+  <hr/>
+  <form action="#">
+    <p>评论框</p>
+    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="写点什么吧"></textarea>
+    <br/>
+    <input type="submit" value="评论" />
+  </form>
+    <script>
+        (function(){
+  var comment = document.getElementById("comment");
+  comment.oninput = function(){
+    if(comment.value.length < 20){
+      comment.setCustomValidity("再夸奖一下吧！！");
+    }else{
+      comment.setCustomValidity("");
+    }
+  };
+})();
+    </script>
+</body>
+</html>
