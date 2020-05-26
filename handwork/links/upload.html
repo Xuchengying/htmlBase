@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创作中心——第一手工</title>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/handwork/css/common/common.css">
+    <link rel="stylesheet" href="../css/upload.css">
+
+</head>
+<body>
+    <!-- Heading Begin -->
+    <div class="header">
+        <div class="headerContent">
+            <div class="header_name"><span>第一手工</span></div>
+            <div class="menu">
+                <div class="itemOne">
+                    <h3><a href="../index.html">首页</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">忆手工<span id="up"></span> </a></h3>
+                    <div class="itemTwo">
+                        <ul>
+                            <li><a href="#">雕塑雕刻</a></li>
+                            <li><a href="#">黏土陶艺</a></li>
+                            <li><a href="#">刺绣</a></li>
+                            <li><a href="#">美食烘焙</a></li>
+                            <li><a href="#">皮艺</a></li>
+                            <li><a href="#">木艺</a></li>
+                            <li><a href="#">布艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itemOne"> 
+                    <h3><a href="#teach">手工教程</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#production">作品集<span id="up"></span> </a></h3>
+                    <div class="itemTwo">
+                        <ul>
+                            <li><a href="#">雕塑雕刻</a></li>
+                            <li><a href="#">黏土陶艺</a></li>
+                            <li><a href="#">刺绣</a></li>
+                            <li><a href="#">美食烘焙</a></li>
+                            <li><a href="#">皮艺</a></li>
+                            <li><a href="#">木艺</a></li>
+                            <li><a href="#">布艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">集市</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#Comnication">广场论坛</a></h3>
+                </div>
+            </div>
+            <!-- 搜索框 -->
+            <div class="searchBox">
+               <input type="text" placeholder="搜索教程、用户" onkeypress="sgk_search_tab(event)"/>
+               <span id="search" ><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <!-- 登录注册 -->
+            <div class="nav-user-center">
+                <div class="item"><a href="/handwork/links/login.html" target="_blank">登录</a></div>
+                <div class="item"><a href="/handwork/links/signup.html" target="_blank">注册</a></div>
+                <div class="itemPlus"><a href="#" target="_blank">投稿</a></div>
+            </div>
+            <!-- <div class="clear"></div> -->
+        </div>
+    </div>
+    <!-- Heading End -->
+
+
+
+    <!-- Main begin -->
+    <div class="tab">
+        <div class="tab-header" id="header">
+            <ul>
+                <li class="bgc">视频投稿</li>
+                <li class="name">图片投稿</li>
+            </ul>
+        </div>
+        <div class="tab-content" id="content">
+            <div class="show">
+                <p>请上传心仪的视频</p>
+                <span>标题&nbsp;&nbsp;</span><input type="text" id="cpname" name="cpname" placeholder="最多**个字符" ><br>
+                <span>视频上传&nbsp;&nbsp;</span><input type="file" name="cpvideo"><br>
+                <span>类型</span>
+                <select name="gid">
+                </select><br>
+                <button type="submit" value="发布" >上传</button>
+            </div>
+            <div>
+                <p>请上传心仪的图片</p>
+                <span>标题&nbsp;&nbsp;</span><input type="text" id="cpname" name="cpname" placeholder="最多**个字符" ><br>
+                <span>图片上传&nbsp; &nbsp;</span><input type="file" name="cpvideo"><br>
+                <span>类型</span>
+                <select name="gid">
+                </select><br>
+                <button type="submit" value="发布" >上传</button>
+            </div>
+        </div>
+       
+    </div>
+    
+    <!-- Footer Begin -->
+    <div class = "footer">
+        <div class="footerContent">
+            <p class="center">
+                <a href="index.html"> 关于我们 </a>
+                <a href="#"> 联系我们 </a>
+            </p>
+            <p class="center size14">版权所有：重庆邮电大学移通学院双体系卓越人才教育基地</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <script src="../js/upload.js"></script>
+    <!-- Main end -->
+</body>
+</html>

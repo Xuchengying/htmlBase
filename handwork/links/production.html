@@ -4,8 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>手工production</title>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/production.css">
+    <link rel="stylesheet" href="../css/common/common.css">
 </head>
 <body>
+    <!-- Heading Begin -->
+    <div class="header">
+        <div class="headerContent">
+            <div class="header_name"><span>第一手工</span></div>
+            <div class="menu">
+                <div class="itemOne">
+                    <h3><a href="index.html">首页</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">忆手工<span id="up"></span> </a></h3>
+                    <div class="itemTwo">
+                        <ul>
+                            <li><a href="#">雕塑雕刻</a></li>
+                            <li><a href="#">黏土陶艺</a></li>
+                            <li><a href="#">刺绣</a></li>
+                            <li><a href="#">美食烘焙</a></li>
+                            <li><a href="#">皮艺</a></li>
+                            <li><a href="#">木艺</a></li>
+                            <li><a href="#">布艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itemOne"> 
+                    <h3><a href="#teach">手工教程</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#production">作品集<span id="up"></span> </a></h3>
+                    <div class="itemTwo">
+                        <ul>
+                            <li><a href="#">雕塑雕刻</a></li>
+                            <li><a href="#">黏土陶艺</a></li>
+                            <li><a href="#">刺绣</a></li>
+                            <li><a href="#">美食烘焙</a></li>
+                            <li><a href="#">皮艺</a></li>
+                            <li><a href="#">木艺</a></li>
+                            <li><a href="#">布艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#">集市</a></h3>
+                </div>
+                <div class="itemOne">
+                    <h3><a href="#Comnication">广场论坛</a></h3>
+                </div>
+            </div>
+            <!-- 搜索框 -->
+            <div class="searchBox">
+               <input type="text" placeholder="搜索教程、用户" onkeypress="sgk_search_tab(event)"/>
+               <span id="search" ><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <!-- 登录注册 -->
+            <div class="nav-user-center">
+                <div class="item"><a href="/handwork/links/login.html" target="_blank">登录</a></div>
+                <div class="item"><a href="/handwork/links/signup.html" target="_blank">注册</a></div>
+                <div class="itemPlus"><a href="../handwork/links/upload.html" target="_blank">投稿</a></div>
+            </div>
+            <!-- <div class="clear"></div> -->
+        </div>
+    </div>
+    <!-- Heading End -->
+
+    <!-- main begin -->
+    <form action="">
+        <div class="wrap">
+            <div class="wrap-info">
+                <p>标题：和拍视频</p>
+                <p>视频展示：</p>
+                <video src="/handwork/video/3组.mp4" controls="controls"></video>
+                <p>上传时间：</p>
+                <p>作者：</p>
+                <hr>
+                <div>
+                    <span><i class="fa fa-heart" aria-hidden="true"></i>89</span>
+                    <span><i class="fa fa-comment" aria-hidden="true"></i>20</span>
+                    <span><i class="fa fa-eye" aria-hidden="true"></i> 36</span>
+                </div>
+            </div>
+        </div>
     
+    <div class="comment">
+        <h2>评论区</h2>
+        ${loginUser.name}进入了 ${compose.cpname} 作品id ${compose.cpid}
+        <div>
+            <form action="${pageContext.request.contextPath}/ComposeServlet?method=addComment" method="post">
+                <div>
+                    <label for="textarea">您的评论：</label>
+                    <textarea cols="40" rows="8" name="cmcontent" id="textarea"></textarea>
+                    <%--            <a href="javascript:void(0)" class="comment_btn">评论</a>--%>
+                    <a href="${pageContext.request.contextPath}/ComposeServlet?method=findComposeByCPid&cpid=${compose.cpid}"
+                       class="comment_btn">评论</a>
+                </div>
+            </form>
+            <div id="comments">
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <!-- main end -->
+    </body>
+    <script type="text/javascript">
+        <!--
+        $(function () {
+            //自动展示评论
+            var url = "${pageContext.request.contextPath}/CommentServlet";
+            var obj = {"method": "findAllByCPid", "cpid": "${compose.cpid}"};
+            $.post(url, obj, function (data, status) {
+    
+                //作品下的评论展示
+                $.each(data, function (comment, object) {
+    
+                    var ul = "<ul > <div><h3>评论：</h3> " + object.from_userid + "用户的评论   这条评论的id是：" + object.cmid + "<div id=''>" + object.cmcontent + " <a href='javascript:void(0)' class='reply_btn'>回复</a>  <a href='javascript:void(0)' class='zhankaipinglun'>展开</a></div> <div class='object.cmid'></div></ul>";
+                    $("#comments").append(ul);
+    
+                    //页面加载完毕后点击回复执行的事件
+                    $(".reply_btn").click(function () {
+    
+    
+                        $(".reply_textarea").remove();
+                        $(this).parent().append("<div class='reply_textarea'><form method='post' action=''  id='reply_textareaform' ><textarea name='recontent' cols='40' rows='5' id='reply_textarea'></textarea><br/><input type='submit' value='发表' /></form></div>");
+                        <%--$(this).parent().append("<div class='reply_textarea'><textarea name='recontent' cols='40' rows='5' id='reply_textarea'></textarea><br/><a href='${pageContext.request.contextPath}/ComposeServlet?method=findComposeByCPid&cpid=${compose.cpid}' class='reply_btn'>发表</a></div>")--%>
+    
+                        //点击回复，自动展开此评论下的回复
+                        //点击发表执行的事件
+                        //回复功能reply_textarea
+                        $("#reply_textareaform").submit(function () {
+                            var reply = $("#reply_textarea").val();
+                            //如果回复类型是comment 评论，回复目标就是 评论的id
+                            var url2 = "${pageContext.request.contextPath}/ReplyServlet";
+                            var replyCommentObj = {
+                                method: "addreplyComment",
+                                cmid: object.cmid,
+                                rtype: "comment",
+                                reply_id: object.cmid,
+                                rcontent: reply,
+                                rfrom_userid: "${loginUser.uid}",
+                                to_userid: object.from_userid
+                            }
+                            $.post(url2, replyCommentObj, function (data) {
+                            })
+    
+                        })
+    
+    
+                        var urlreply = "${pageContext.request.contextPath}/ReplyServlet";
+                        var replyByCMidObj = {method: "findAllByCMid", cmid: object.cmid};
+    
+                        $.post(urlreply, replyByCMidObj, function (data) {
+                            $.each(data, function (reply, replyObject) {
+                                var li = "  <li><h4>回复：</h4>" + replyObject.rfrom_userid + "@" + replyObject.to_userid + " /n 回复类型" + replyObject.rtype + "/n 回复的作品id是： " + replyObject.cmid + " \n 回复内容是: <div id='reply_reply_div'>" + replyObject.rcontent + " <a href='javascript:void(0)' class='reply_reply_btn'>回复</a></div></li>";
+                                $(".reply_textarea").append(li);
+    
+                            })
+                        }, "json")
+    
+    
+    
+    
+                    });
+    
+    
+                })
+    
+            }, "json")
+    
+            // 评论功能
+            $(".comment_btn").click(function () {
+                var cmcontent = $("#textarea").val();
+                var url1 = "${pageContext.request.contextPath}/ComposeServlet";
+                var commentobj = {
+                    method: "addComment",
+                    cpid: "${compose.cpid}",
+                    from_userid: "${loginUser.uid}",
+                    cmcontent: cmcontent
+                };
+                $.post(url1, commentobj, function (data) {
+                    alert("data: " + data);
+    
+                }, "json")
+    
+            })
+    
+        })
+    
+        //-->
+    </script>
 </body>
 </html>

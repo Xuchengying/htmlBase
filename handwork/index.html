@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>http://www.handwork.com</title>
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/handwork/css/common/common.css">
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../handwork/css/common/common.css">
     <link rel="stylesheet" href="../handwork/css/index.css">
 </head>
 
@@ -32,11 +32,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="itemOne">
-                    <h3><a href="#">手工教程</a></h3>
+                <div class="itemOne"> 
+                    <h3><a href="#teach">手工教程</a></h3>
                 </div>
                 <div class="itemOne">
-                    <h3><a href="#">作品集<span id="up"></span> </a></h3>
+                    <h3><a href="#production">作品集<span id="up"></span> </a></h3>
                     <div class="itemTwo">
                         <ul>
                             <li><a href="#">雕塑雕刻</a></li>
@@ -53,7 +53,7 @@
                     <h3><a href="#">集市</a></h3>
                 </div>
                 <div class="itemOne">
-                    <h3><a href="#">广场论坛</a></h3>
+                    <h3><a href="#Comnication">广场论坛</a></h3>
                 </div>
             </div>
             <!-- 搜索框 -->
@@ -65,7 +65,7 @@
             <div class="nav-user-center">
                 <div class="item"><a href="/handwork/links/login.html" target="_blank">登录</a></div>
                 <div class="item"><a href="/handwork/links/signup.html" target="_blank">注册</a></div>
-                <div class="itemPlus"><a href="#" target="_blank">投稿</a></div>
+                <div class="itemPlus"><a href="../handwork/links/upload.html" target="_blank">投稿</a></div>
             </div>
             <!-- <div class="clear"></div> -->
         </div>
@@ -83,11 +83,11 @@
             <div class="titleShow">
                 <div class="titleLeft">
                     <ul class="list">
-                        <li class="img active"><img src="/handwork/imgs/1.jpg" alt=""></li>
-                        <li class="img"><img src="/handwork/imgs/2.jpg" alt=""></li>
-                        <li class="img"><img src="/handwork/imgs/3.jpg" alt=""></li>
-                        <li class="img"><img src="/handwork/imgs/4.jpg" alt=""></li>
-                        <li class="img"><img src="/handwork/imgs/5.jpg" alt=""></li>
+                        <li class="img active"><img src="../handwork/imgs/1.jpg" alt=""></li>
+                        <li class="img"><img src="../handwork/imgs/2.jpg" alt=""></li>
+                        <li class="img"><img src="../handwork/imgs/3.jpg" alt=""></li>
+                        <li class="img"><img src="../handwork/imgs/4.jpg" alt=""></li>
+                        <li class="img"><img src="../handwork/imgs/5.jpg" alt=""></li>
                     </ul>
                     <ul class="point_list">
                         <li class="point active" data-num='0'></li>
@@ -101,12 +101,11 @@
                     </button>
                 </div>
                 <div class="titleRight">
-                    <span>小英子社区</span>
-                    <div class="img1"></div>
+                    <canvas id="myCanvas" width="400" height="400"></canvas>
                 </div>
             </div>
             <!-- 手工教程 -->
-            <div class="teach">
+            <div class="teach" id="teach">
                 <div class="line-title w1000">
                     <span class="">手工教程</span>
                     <b></b>
@@ -166,7 +165,7 @@
             </div>
 
             <!-- 作品集 -->
-            <div class="production">
+            <div class="production" id="production">
                 <div class="line-title w1000">
                     <span class="">作品集</span>
                     <b></b>
@@ -183,7 +182,7 @@
                 <div class="Content w1000 mb10">
                     <!-- 这里可以显示数据库的 -->
                     <div class="wrap">
-                        <img src="/handwork/imgs/bgbg.jpg" alt="优秀作品">
+                        <img src="../handwork/imgs/bgbg.jpg" alt="优秀作品">
                         <div class="wrap-info">
                             <p>标题：和拍视频</p>
                             <p>上传时间：</p>
@@ -197,7 +196,7 @@
                     </div>
 
                     <div class="wrap">
-                        <img src="/handwork/imgs/bgbg.jpg" alt="优秀作品">
+                        <img src="../handwork/imgs/bgbg.jpg" alt="优秀作品">
                         <div class="wrap-info">
                             <p>标题：和拍视频</p>
                             <p>上传时间：</p>
@@ -211,7 +210,7 @@
                     </div>
 
                     <div class="wrap">
-                        <img src="/handwork/imgs/bgbg.jpg" alt="优秀作品">
+                        <img src="../handwork/imgs/bgbg.jpg" alt="优秀作品">
                         <div class="wrap-info">
                             <p>标题：和拍视频</p>
                             <p>上传时间：</p>
@@ -225,7 +224,7 @@
                     </div>
 
                     <div class="wrap">
-                        <img src="/handwork/imgs/bgbg.jpg" alt="优秀作品">
+                        <img src="../handwork/imgs/bgbg.jpg" alt="优秀作品">
                         <div class="wrap-info">
                             <p>标题：和拍视频</p>
                             <p>上传时间：</p>
@@ -239,7 +238,7 @@
                     </div>
 
                     <div class="wrap">
-                        <img src="/handwork/imgs/bgbg.jpg" alt="优秀作品">
+                        <img src="../handwork/imgs/bgbg.jpg" alt="优秀作品">
                         <div class="wrap-info">
                             <p>标题：和拍视频</p>
                             <p>上传时间：</p>
@@ -253,7 +252,7 @@
                     </div>
 
                     <div class="wrap">
-                        <img src="/handwork/imgs/bgbg.jpg" alt="优秀作品">
+                        <img src="../handwork/imgs/bgbg.jpg" alt="优秀作品">
                         <div class="wrap-info">
                             <p>标题：和拍视频</p>
                             <p>上传时间：</p>
@@ -269,7 +268,7 @@
             </div>
 
             <!-- 广场论坛 -->
-            <div class="Comnication">
+            <div class="Comnication" id="Comnication">
                 <div class="line-title w1000">
                     <span class="">广场论坛</span>
                     <b></b>
@@ -428,6 +427,6 @@
     <!-- Footer End -->
 
     <!-- JavaScript -->
-    <script src="/handwork/js/index.js"></script>
+    <script src="../handwork/js/index.js"></script>
 </body>
 </html>

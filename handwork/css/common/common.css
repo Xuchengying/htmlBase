@@ -3,6 +3,10 @@
     margin: 0px;
     padding: 0px;
 }
+.header{
+    width: 100%;
+
+}
 /* 头部容器 */
 .headerContent{
     display: flex;
@@ -75,7 +79,6 @@
     text-decoration: none;
     width: 100%;
     color: black;
-
 }
 .itemTwo a:hover{
     display: block;
@@ -105,7 +108,7 @@
 /* 登录注册样式 */
 .nav-user-center{
     display: flex;
-    margin-left: 30px;
+    margin-left: 400px;
 }
 .item{
     margin: 20px 10px;

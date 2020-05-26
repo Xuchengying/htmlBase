@@ -1,0 +1,27 @@
+
+.wrap{
+    display: flex;
+    width: 350px;
+    height: 300px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    
+}
+video{
+    width: 400px;
+    height: 300px;
+}
+.wrap-info p{
+    position:relative;
+    margin: 10px 0px;
+    color: #666;
+    letter-spacing: 2px;
+}
+hr{
+    width: 400px;
+}
+.comment{
+    width: 50%;
+    height: auto;
+    margin: 200px 600px;
+}
