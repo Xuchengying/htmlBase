@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>催眠灯泡</title>
+	<style>
+		body{
+			margin:0;background-color: #123;
+		}
+
+		.box{
+			width: 80px;height: 320px;
+			/*background-color:green;*/
+			margin:auto;
+			transform-origin: top;
+			animation:go 5s linear infinite;
+
+		}
+		.box:hover{
+			animation-play-state:paused;
+		}
+		@keyframes go{
+			0%{transform: rotate(-60deg);}
+			50%{transform: rotate(60deg)}
+			100%{transform: rotate(-60deg)}
+		}
+		.box:hover .bulb{
+
+			background-color: #FFD700;
+			box-shadow:0 300px 100px 100px #FFD700;
+		}
+		.box:before{/*灯线*/
+			content:'';
+			display:block;
+			width: 4px;
+			height: 220px;
+			background-image: linear-gradient(45deg,orange 25%,transparent 25%, transparent 50%,orange 50%,orange 75%,transparent 75%);
+			background-size: 20px 20px;
+			margin: auto;
+			animation:run 3s linear infinite;
+		}
+		@keyframes run{
+			0%{
+				background-position-y:0%;	
+			}
+			100%{
+				background-position-y:100%;
+			}
+		}
+
+		.box:after{/*灯座*/
+			content: '';
+			display: block;
+			width: 5px;height: 0px;
+			margin: -100px auto 0;
+			border-top: 20px solid #a11;
+			border-right: 10px solid transparent;
+			border-bottom: 20px solid #345;
+			border-left:10px solid transparent;
+			border-top:none;
+		}
+		.box .bulb{/*灯泡*/
+			width: 80px;
+			height: 80px;
+			margin-top: 15px;
+			border-radius: 50%;
+			box-shadow:0 0 10px 0 #fff inset;
+			background-image: linear-gradient(#2F4F4F 20%,transparent 25%, transparent 30%,#2F4F4F 35%,#2F4F4F 40%,transparent 45%,transparent 50%,#2F4F4F 55%,#2F4F4F 60%,transparent 65%,transparent 70%,#2F4F4F 75%,#2F4F4F 80%,transparent 85%,transparent 90%,#2F4F4F 95%,#2F4F4F 100%);
+			background-size: 80px 10px;
+			animation: spin 2s linear infinite;
+		}
+		@keyframes spin{
+			0%{
+				background-position-y:0%;
+			}
+			100%{
+				background-position-y:100%;
+			}
+		}
+		
+		.box .bulb:before {/*灯芯*/
+			content:'';
+			display:block;
+			width: 20px;height: 20px;
+			margin:auto;
+			border-radius:50%;
+			box-shadow:0 0 5px 0 #fff inset;
+		}
+		.box .bulb:after{/*灯罩*/
+			content: '';
+			display: block;
+			width: 200px;height: 12px;
+			border-radius: 50%;
+			background-color: #678;
+			box-shadow: 0 0 5px 0 #fff;
+			margin: -20px -60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="bulb"></div>
+	</div>
+</body>
+</html>

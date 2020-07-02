@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	<title>言心</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+   </head>
+   
+   <style>
+
+      *{
+         margin:0em;
+         padding:0em;
+      }
+
+      body { 
+         background: #403833;
+         font-family: 'Open Sans';
+         font-weight: 100;
+         font-size:100%;
+         margin:0em;
+         padding:0em;
+      }
+
+      .loader {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         text-align:center;
+         user-select: none;
+      }
+
+      .circle{
+         position:absolute;
+         top:50%;
+         left:50%;
+         text-align:center;
+      }
+
+      .circle:nth-child(1){
+         width:100px;
+         height:100px;
+         margin-top:-50px;
+         margin-left:-125px;
+         border-radius: 100%;
+         background:#DB2F00;
+         z-index:2;
+         font-size:2.5em;
+         line-height:2.5em;
+         color:#fff;
+         box-shadow:0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+      }
+
+      .circle:nth-child(2){
+         width:150px;
+         height:150px;
+         margin-top:-75px;
+         margin-left:-50px;
+         border-radius: 100%;
+         background:#F2F2EF;
+         z-index:1;
+         font-family: 'Uni Sans';
+         font-size:7em;
+         font-weight:300;
+         color:#303030;
+         padding-left:5px;
+         line-height:1.35em;
+         animation: circle 1.5s infinite ease-in-out;
+      }
+
+      .circle:nth-child(3){
+         width:100px;
+         height:100px;
+         margin-top:-50px;
+         margin-left:75px;
+         border-radius: 100%;
+         background:#13A3A5;
+         z-index:2;
+         font-size:2.5em;
+         line-height:2.5em;
+         color:#fff;
+         box-shadow:0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+      }
+
+      .scircle{
+         position: absolute;
+         top: -25px;
+         left: -23px;
+         width:200px;
+         height:200px;
+         animation: scircle 1.5s ease-in-out infinite;
+      }
+
+      .circle:nth-child(1) .scircle{
+         top: -12px;
+         left: -12px;
+         width: 125px;
+         height: 125px;
+      }
+
+      .circle:nth-child(1) .scircle:after{
+         top:120px;
+      }
+
+      .circle:nth-child(3) .scircle:after{
+         top:120px;
+      }
+
+      .circle:nth-child(3) .scircle{
+         top: -12px;
+         left: -12px;
+         width: 125px;
+         height: 125px;
+      }
+
+      /*.scircle:nth-child(2){
+         animation: scircle2 1.5s ease-in-out infinite;
+      }*/
+      .scircle:before{
+         content: '';
+         position: absolute;
+         width: .1em;
+         height: .1em;
+         border-radius: 100%;
+         background: #fff; /* Pick a color 1*/
+      }
+
+      .scircle:after{
+         content: '';
+         position: absolute;
+         top:190px;
+         width: .1em;
+         height: .1em;
+         border-radius: 100%;
+         background: #fff; /* Pick a color 1*/
+      }
+
+
+
+      @keyframes circle{
+         0%  {
+               filter: alpha(opacity=50);
+               opacity: 0.5;
+            }
+         45%,50%,55%{
+            filter: alpha(opacity=100);
+            opacity: 1;
+            }
+
+         100%{
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+            }
+      }
+
+
+
+
+      @keyframes scircle {
+         0% {
+            transform: rotate(0deg);
+         }
+         100% {
+            transform: rotate(360deg);
+         }
+      }
+
+      @keyframes scircle2 {
+         0% {
+            transform: rotate(90deg);
+         }
+         100% {
+            transform: rotate(450deg);
+         }
+      }
+
+
+   </style>
+<body>
+	<div class="loader">
+		<div class="circle">LO
+			<div class="s c i r c l e"></div>
+			<div class="scircle"></div>
+		</div>
+		<div class="circle">U
+			<div class="scircle"></div>
+			<div class="scircle"></div>
+		</div>
+		<div class="circle">VE
+			<div class="scircle"></div>
+			<div class="scircle"></div>
+		</div>
+	</div>
+</body>
+</html>

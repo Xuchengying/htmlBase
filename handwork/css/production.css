@@ -1,14 +1,13 @@
 
 .wrap{
     display: flex;
-    width: 350px;
+    width: 1000px;
     height: 300px;
     margin: 20px auto;
     flex-wrap: wrap;
-    
 }
 video{
-    width: 400px;
+    width: 1000px;
     height: 300px;
 }
 .wrap-info p{
@@ -18,10 +17,10 @@ video{
     letter-spacing: 2px;
 }
 hr{
-    width: 400px;
+    width: 800px;
 }
 .comment{
-    width: 50%;
+    width: 1000px;
     height: auto;
     margin: 200px 600px;
 }

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>言心</title>
+
+  <style>
+    body{
+      margin: 0em;
+      padding: 0em;
+      background: #e9d3c6;      
+      font-family: 'Open Sans';
+      font-weight: 100;
+      color:#f2f2f2;
+      font-size:100%;
+    }
+    .container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align:center;
+      user-select: none;
+      box-shadow: inset 0px -5px 10px -7px rgba(0,0,0,0.5), inset 0px 5px 10px -7px rgba(0,0,0,0.5);
+      padding: 5% 0%;
+      overflow:hidden;
+      cursor:default;
+      min-width:33.25em;
+    }
+    .container div{
+      width:2.5em;
+      height:2.5em;
+      background: #FF0000 ;
+      border-radius: 100%;
+      margin:0 5px;
+      float:left;
+      font-size:1.65em;
+      line-height:2.5em;
+      animation: bounce 1.75s infinite ease-in-out;
+    }
+    .container div:nth-child(1){
+      animation-delay: 0ms;
+      background: #b0d3d9;
+      color:#fff;
+    }
+
+    .container div:nth-child(2){
+      animation-delay: 50ms;
+      background: #e3eec6;;
+      color:#555;
+    }
+
+    .container div:nth-child(3){
+      animation-delay: 100m;
+      background:#B5D1A0  ;
+      color:#fff;
+    }
+
+    .container div:nth-child(4){
+      animation-delay: 150ms;
+      background:#b0d3d9 ;
+      color:#555;
+    }
+
+    .container div:nth-child(5){
+      animation-delay: 200ms;
+      background:#ECEEC8;
+      color:#fff;
+    }
+
+    .container div:nth-child(6){
+      animation-delay: 250ms;
+      background: #f8c99f;;
+      color:#fff;
+    }
+
+    .container div:nth-child(7){
+      animation-delay: 300ms;
+      color:#fff;
+      background: #b8b5ca;;
+    }
+
+
+    /* 动画部分 */
+    @keyframes bounce {
+      0% { 
+        transform: translateY(-150px);
+      } 
+      20% { 
+        transform: translateY(30px); 
+      } 
+      30% { 
+        transform: translateY(-10px); 
+      } 
+      40% { 
+        transform: translateY(0); 
+      } 
+      60% { 
+        transform: translateY(0); 
+      } 
+      80% { 
+        transform: translateY(-20px); 
+      } 
+      100% { 
+        transform: translateY(150px); 
+      } 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>我</div>
+		<div>好</div>
+		<div>喜</div>
+    <div>欢</div>
+		<div>你</div>
+		<div>鸭</div>
+    <div>~</div>    
+  </div>
+</body>
+</html>

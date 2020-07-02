@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>言心</title>
+
+   <style>
+      *{
+         margin: 0em;
+         padding: 0em;
+      }
+      body{
+         background-color:  #403833;
+         font-family: 'Open Sans';
+         font-weight: 100;
+         color: #f2f2f2;
+      }
+      .container{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+         user-select: none;
+         cursor: default;
+      }
+      .container .text{
+         position: absolute;
+         top: 1.8em;
+         left: 0em;
+         z-index: 5;
+         font-size: 2em;
+         text-transform: uppercase;
+         animation: text 2.5s cubic-bezier(0.750, 0.000, 0.500, 1.000) infinite normal;
+      }
+      .spinner{
+         position: relative;
+         width: 11em;
+         height: 11em;
+         color: #fff;
+      }
+      .spinner::before,
+      .spinner::after{
+         content: "";
+         width: 10em;
+         height: 10em;
+         position: relative;
+         display: block;
+      }
+
+      .spinner:before{
+         background-color: #009688;
+        animation: spinner 2.5s cubic-bezier(0.750, 0.000, 0.500, 1.000) infinite normal;
+      }
+
+      .spinner:after{
+         position: relative;
+         bottom: -1.75em;
+         height: .25em;
+         border-radius: 50%;
+         background-color: #322b27;
+
+
+         animation: shadow 2.5s cubic-bezier(0.750, 0.000, 0.500, 1.000) infinite normal;
+      }
+
+      /* 文字缩放动画 */
+      @keyframes text{
+         0%{
+            transform: scale(1,1)
+         }
+         50%{
+            transform: scale(.5,.5);
+         }
+         100%{
+            transform: scale(1,1);
+         }
+      }
+
+      /* 方形动画 */
+      @keyframes spinner{
+         50%{
+            border-radius: 50%;
+            transform: scale(.5) rotate(360deg);
+            background-color: #13a3a5;
+         }
+         100%{
+            transform: scale(1) rotate(720deg);
+            background-color: #db2f00;
+         }
+      }
+
+      /* 阴影动画 */
+      @keyframes shadow{
+         50%{
+            transform: scale(.5);
+            background-color: #322b27;
+         }
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="text">only you</div>
+      <div class="spinner"></div>
+   </div>
+</body>
+</html>
